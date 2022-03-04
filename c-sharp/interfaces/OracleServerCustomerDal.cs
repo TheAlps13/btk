@@ -1,0 +1,7 @@
+namespace interfaces
+{
+    class OracleServerCustomerDal
+    {
+        
+    }
+}
