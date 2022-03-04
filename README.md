@@ -1,2 +1,2 @@
 # btk
-Btk akademi eğitimleri
+Btk akademi ders alıştırmaları
