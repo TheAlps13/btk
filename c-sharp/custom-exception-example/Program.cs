@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using static custom_exception_example.ExceptionHandler;
 namespace custom_exception_example
 {
     class Program
@@ -8,14 +8,10 @@ namespace custom_exception_example
 
         static void Main(string[] args)
         {
-            try
+            HandleException(() =>
             {
                 Find("Alpe");
-            }
-            catch (RecordNotFoundException exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
+            });
         }
 
         static void Find(string name)
