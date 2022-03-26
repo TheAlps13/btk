@@ -10,3 +10,13 @@
 *.editorconfig
 *AssemblyAttributes.cs
 *AssemblyInfo.cs
+*.dtbcache*
+*.futdcache*
+*.suo
+*.testlog
+*.manifest
+*.sln
+*.user
+*.csproj.*
+*.resources
+*.resx
