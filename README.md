@@ -1,2 +1,2 @@
 # btk
-Btk akademi ders alıştırmaları
+Btk academy examples
