@@ -38,5 +38,23 @@ namespace E_Trade
             MessageBox.Show("Product added!");
             LoadProducts();
         }
+
+        private void dgwProducts_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            tbxNameUpdate.Text = dgwProducts.CurrentRow.Cells[1].Value.ToString();
+            tbxUnitPriceUpdate.Text = dgwProducts.CurrentRow.Cells[2].Value.ToString();
+            tbxStockAmountUpdate.Text = dgwProducts.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            _productDal.Update(new Product
+            {
+                Name = tbxNameUpdate.Text,
+                UnitPrice = Convert.ToDecimal(tbxUnitPriceUpdate.Text),
+                StockAmount = Convert.ToInt32(tbxStockAmountUpdate.Text)
+            });
+            LoadProducts();
+        }
     }
 }

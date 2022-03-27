@@ -59,10 +59,22 @@ namespace E_Trade
         public void Add(Product product)
         {
             ConnectionControl();
-            SqlCommand command = new SqlCommand("INSERT INTO Products VALUES(@Name,@UnitPrice,@StockAmount)", _connection);
-            command.Parameters.AddWithValue("@Name", product.Name);
-            command.Parameters.AddWithValue("@UnitPrice", product.UnitPrice);
-            command.Parameters.AddWithValue("@StockAmount", product.StockAmount);
+            SqlCommand command = new SqlCommand("INSERT INTO Products VALUES(@name,@unitPrice,@stockAmount)", _connection);
+            command.Parameters.AddWithValue("@name", product.Name);
+            command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
+            command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
+            command.ExecuteNonQuery();
+            _connection.Close();
+        }
+
+        public void Update(Product product)
+        {
+            ConnectionControl();
+            SqlCommand command = new SqlCommand("UPDATE Products SET Name=@name,UnitPrice=@unitPrice,StockAmount=@stockAmount WHERE Id=@id", _connection);
+            command.Parameters.AddWithValue("@name", product.Name);
+            command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
+            command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
+            command.Parameters.AddWithValue("@id", product.Id);
             command.ExecuteNonQuery();
             _connection.Close();
         }
