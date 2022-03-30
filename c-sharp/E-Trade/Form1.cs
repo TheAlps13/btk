@@ -13,9 +13,10 @@ namespace E_Trade
     public partial class Form1 : Form
     {
         ProductDal _productDal = new ProductDal();
+
         private void LoadProducts()
         {
-            dgwProducts.DataSource = _productDal.GetAll();
+            dgwProducts.DataSource = _productDal.GetAll_Dtb();
         }
 
         public Form1()
@@ -50,10 +51,17 @@ namespace E_Trade
         {
             _productDal.Update(new Product
             {
+                Id = (int) dgwProducts.CurrentRow.Cells[0].Value,
                 Name = tbxNameUpdate.Text,
                 UnitPrice = Convert.ToDecimal(tbxUnitPriceUpdate.Text),
                 StockAmount = Convert.ToInt32(tbxStockAmountUpdate.Text)
             });
+            LoadProducts();
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            _productDal.Delete((int) dgwProducts.CurrentRow.Cells[0].Value);
             LoadProducts();
         }
     }
