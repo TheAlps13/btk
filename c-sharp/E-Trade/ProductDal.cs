@@ -10,7 +10,7 @@ namespace E_Trade
 {
     public class ProductDal
     {
-        private SqlConnection _connection = new SqlConnection(@"server=(localdb)\MSSQLLocalDB;Initial Catalog=E-Trade;Integrated Security=true");
+        private SqlConnection _connection = new SqlConnection(@"server=(localdb)\MSSQLLocalDB;Initial Catalog=ETrade;Integrated Security=true");
         private void ConnectionControl()
         {
             if (_connection.State == ConnectionState.Closed)
@@ -76,6 +76,15 @@ namespace E_Trade
             command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
             command.Parameters.AddWithValue("@id", product.Id);
             command.ExecuteNonQuery();
+            _connection.Close();
+        }
+
+        public void Delete(int id)
+        {
+            ConnectionControl();
+            SqlCommand deleteCommand = new SqlCommand("DELETE Products WHERE Id=@id", _connection);
+            deleteCommand.Parameters.AddWithValue("@id", id);
+            deleteCommand.ExecuteNonQuery();
             _connection.Close();
         }
     }
