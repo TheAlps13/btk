@@ -54,12 +54,14 @@ namespace E_Trade_Entity_Framework_
             // 
             // btnDeleteProduct
             // 
-            this.btnDeleteProduct.Location = new System.Drawing.Point(442, 198);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(516, 228);
+            this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
-            this.btnDeleteProduct.Size = new System.Drawing.Size(82, 158);
+            this.btnDeleteProduct.Size = new System.Drawing.Size(96, 182);
             this.btnDeleteProduct.TabIndex = 13;
             this.btnDeleteProduct.Text = "Delete Product";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // gbxUpdate
             // 
@@ -70,67 +72,77 @@ namespace E_Trade_Entity_Framework_
             this.gbxUpdate.Controls.Add(this.tbxUnitPriceUpdate);
             this.gbxUpdate.Controls.Add(this.lblUnitPriceUpdate);
             this.gbxUpdate.Controls.Add(this.lblStockAmountUpdate);
-            this.gbxUpdate.Location = new System.Drawing.Point(248, 193);
+            this.gbxUpdate.Location = new System.Drawing.Point(289, 223);
+            this.gbxUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbxUpdate.Name = "gbxUpdate";
-            this.gbxUpdate.Size = new System.Drawing.Size(188, 163);
+            this.gbxUpdate.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.gbxUpdate.Size = new System.Drawing.Size(219, 188);
             this.gbxUpdate.TabIndex = 12;
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Update product";
             // 
             // btnUpdateProduct
             // 
-            this.btnUpdateProduct.Location = new System.Drawing.Point(117, 108);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(136, 125);
+            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
-            this.btnUpdateProduct.Size = new System.Drawing.Size(59, 42);
+            this.btnUpdateProduct.Size = new System.Drawing.Size(69, 48);
             this.btnUpdateProduct.TabIndex = 8;
             this.btnUpdateProduct.Text = "Update Product";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // tbxNameUpdate
             // 
-            this.tbxNameUpdate.Location = new System.Drawing.Point(91, 19);
+            this.tbxNameUpdate.Location = new System.Drawing.Point(106, 22);
+            this.tbxNameUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbxNameUpdate.Name = "tbxNameUpdate";
-            this.tbxNameUpdate.Size = new System.Drawing.Size(86, 20);
+            this.tbxNameUpdate.Size = new System.Drawing.Size(100, 23);
             this.tbxNameUpdate.TabIndex = 2;
             // 
             // tbxStockAmountUpdate
             // 
-            this.tbxStockAmountUpdate.Location = new System.Drawing.Point(91, 83);
+            this.tbxStockAmountUpdate.Location = new System.Drawing.Point(106, 96);
+            this.tbxStockAmountUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbxStockAmountUpdate.Name = "tbxStockAmountUpdate";
-            this.tbxStockAmountUpdate.Size = new System.Drawing.Size(86, 20);
+            this.tbxStockAmountUpdate.Size = new System.Drawing.Size(100, 23);
             this.tbxStockAmountUpdate.TabIndex = 6;
             // 
             // lblNameUpdate
             // 
             this.lblNameUpdate.AutoSize = true;
-            this.lblNameUpdate.Location = new System.Drawing.Point(9, 22);
+            this.lblNameUpdate.Location = new System.Drawing.Point(10, 25);
+            this.lblNameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameUpdate.Name = "lblNameUpdate";
-            this.lblNameUpdate.Size = new System.Drawing.Size(41, 13);
+            this.lblNameUpdate.Size = new System.Drawing.Size(45, 15);
             this.lblNameUpdate.TabIndex = 1;
             this.lblNameUpdate.Text = "Name :";
             // 
             // tbxUnitPriceUpdate
             // 
-            this.tbxUnitPriceUpdate.Location = new System.Drawing.Point(91, 53);
+            this.tbxUnitPriceUpdate.Location = new System.Drawing.Point(106, 61);
+            this.tbxUnitPriceUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbxUnitPriceUpdate.Name = "tbxUnitPriceUpdate";
-            this.tbxUnitPriceUpdate.Size = new System.Drawing.Size(86, 20);
+            this.tbxUnitPriceUpdate.Size = new System.Drawing.Size(100, 23);
             this.tbxUnitPriceUpdate.TabIndex = 5;
             // 
             // lblUnitPriceUpdate
             // 
             this.lblUnitPriceUpdate.AutoSize = true;
-            this.lblUnitPriceUpdate.Location = new System.Drawing.Point(9, 55);
+            this.lblUnitPriceUpdate.Location = new System.Drawing.Point(10, 63);
+            this.lblUnitPriceUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnitPriceUpdate.Name = "lblUnitPriceUpdate";
-            this.lblUnitPriceUpdate.Size = new System.Drawing.Size(37, 13);
+            this.lblUnitPriceUpdate.Size = new System.Drawing.Size(39, 15);
             this.lblUnitPriceUpdate.TabIndex = 3;
             this.lblUnitPriceUpdate.Text = "Price :";
             // 
             // lblStockAmountUpdate
             // 
             this.lblStockAmountUpdate.AutoSize = true;
-            this.lblStockAmountUpdate.Location = new System.Drawing.Point(9, 86);
+            this.lblStockAmountUpdate.Location = new System.Drawing.Point(10, 99);
+            this.lblStockAmountUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStockAmountUpdate.Name = "lblStockAmountUpdate";
-            this.lblStockAmountUpdate.Size = new System.Drawing.Size(80, 13);
+            this.lblStockAmountUpdate.Size = new System.Drawing.Size(89, 15);
             this.lblStockAmountUpdate.TabIndex = 4;
             this.lblStockAmountUpdate.Text = "Stock Amount :";
             // 
@@ -143,67 +155,77 @@ namespace E_Trade_Entity_Framework_
             this.gbxAdd.Controls.Add(this.tbxUnitPrice);
             this.gbxAdd.Controls.Add(this.lblUnitPrice);
             this.gbxAdd.Controls.Add(this.lblStockAmount);
-            this.gbxAdd.Location = new System.Drawing.Point(12, 193);
+            this.gbxAdd.Location = new System.Drawing.Point(14, 223);
+            this.gbxAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbxAdd.Name = "gbxAdd";
-            this.gbxAdd.Size = new System.Drawing.Size(188, 163);
+            this.gbxAdd.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.gbxAdd.Size = new System.Drawing.Size(219, 188);
             this.gbxAdd.TabIndex = 11;
             this.gbxAdd.TabStop = false;
             this.gbxAdd.Text = "Add product";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(117, 108);
+            this.btnAdd.Location = new System.Drawing.Point(136, 125);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(59, 42);
+            this.btnAdd.Size = new System.Drawing.Size(69, 48);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add Product";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(91, 19);
+            this.tbxName.Location = new System.Drawing.Point(106, 22);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(86, 20);
+            this.tbxName.Size = new System.Drawing.Size(100, 23);
             this.tbxName.TabIndex = 2;
             // 
             // tbxStockAmount
             // 
-            this.tbxStockAmount.Location = new System.Drawing.Point(91, 83);
+            this.tbxStockAmount.Location = new System.Drawing.Point(106, 96);
+            this.tbxStockAmount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbxStockAmount.Name = "tbxStockAmount";
-            this.tbxStockAmount.Size = new System.Drawing.Size(86, 20);
+            this.tbxStockAmount.Size = new System.Drawing.Size(100, 23);
             this.tbxStockAmount.TabIndex = 6;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(9, 22);
+            this.lblName.Location = new System.Drawing.Point(10, 25);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(41, 13);
+            this.lblName.Size = new System.Drawing.Size(45, 15);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name :";
             // 
             // tbxUnitPrice
             // 
-            this.tbxUnitPrice.Location = new System.Drawing.Point(91, 53);
+            this.tbxUnitPrice.Location = new System.Drawing.Point(106, 61);
+            this.tbxUnitPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbxUnitPrice.Name = "tbxUnitPrice";
-            this.tbxUnitPrice.Size = new System.Drawing.Size(86, 20);
+            this.tbxUnitPrice.Size = new System.Drawing.Size(100, 23);
             this.tbxUnitPrice.TabIndex = 5;
             // 
             // lblUnitPrice
             // 
             this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Location = new System.Drawing.Point(9, 55);
+            this.lblUnitPrice.Location = new System.Drawing.Point(10, 63);
+            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(37, 13);
+            this.lblUnitPrice.Size = new System.Drawing.Size(39, 15);
             this.lblUnitPrice.TabIndex = 3;
             this.lblUnitPrice.Text = "Price :";
             // 
             // lblStockAmount
             // 
             this.lblStockAmount.AutoSize = true;
-            this.lblStockAmount.Location = new System.Drawing.Point(9, 86);
+            this.lblStockAmount.Location = new System.Drawing.Point(10, 99);
+            this.lblStockAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStockAmount.Name = "lblStockAmount";
-            this.lblStockAmount.Size = new System.Drawing.Size(80, 13);
+            this.lblStockAmount.Size = new System.Drawing.Size(89, 15);
             this.lblStockAmount.TabIndex = 4;
             this.lblStockAmount.Text = "Stock Amount :";
             // 
@@ -211,22 +233,25 @@ namespace E_Trade_Entity_Framework_
             // 
             this.dgwProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProducts.Location = new System.Drawing.Point(12, 12);
+            this.dgwProducts.Location = new System.Drawing.Point(14, 14);
+            this.dgwProducts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgwProducts.Name = "dgwProducts";
             this.dgwProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgwProducts.RowTemplate.Height = 25;
-            this.dgwProducts.Size = new System.Drawing.Size(512, 175);
+            this.dgwProducts.Size = new System.Drawing.Size(597, 202);
             this.dgwProducts.TabIndex = 10;
+            this.dgwProducts.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwProducts_RowHeaderMouseClick);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 360);
+            this.ClientSize = new System.Drawing.Size(618, 415);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.dgwProducts);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
