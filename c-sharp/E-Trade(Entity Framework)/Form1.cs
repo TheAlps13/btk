@@ -42,7 +42,7 @@ namespace E_Trade_Entity_Framework_
             {
                 Id = Convert.ToInt32(dgwProducts.CurrentRow.Cells[0].Value),
                 Name = tbxNameUpdate.Text,
-                UnitPrice = Decimal.Parse(tbxStockAmountUpdate.Text),
+                UnitPrice = Decimal.Parse(tbxUnitPriceUpdate.Text),
                 StockAmount = Int32.Parse(tbxStockAmountUpdate.Text)
             });
 
