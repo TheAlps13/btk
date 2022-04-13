@@ -16,6 +16,11 @@ namespace E_Trade_Entity_Framework_
             using (ETradeContext eTradeContext = new ETradeContext())
                 return eTradeContext.Products.ToList();
         }
+        public List<Product> GetProductByName(string name)
+        {
+            using (ETradeContext eTradeContext = new ETradeContext())
+                return eTradeContext.Products.Where(product => product.Name.Contains(name)).ToList();
+        }
         public void AddProduct(Product product)
         {
             using (ETradeContext eTradeContext = new ETradeContext())

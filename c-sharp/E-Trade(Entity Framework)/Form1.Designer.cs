@@ -47,17 +47,20 @@ namespace E_Trade_Entity_Framework_
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.lblStockAmount = new System.Windows.Forms.Label();
             this.dgwProducts = new System.Windows.Forms.DataGridView();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.gbxSearch = new System.Windows.Forms.GroupBox();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
+            this.gbxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDeleteProduct
             // 
-            this.btnDeleteProduct.Location = new System.Drawing.Point(516, 228);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(468, 355);
             this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
-            this.btnDeleteProduct.Size = new System.Drawing.Size(96, 182);
+            this.btnDeleteProduct.Size = new System.Drawing.Size(145, 56);
             this.btnDeleteProduct.TabIndex = 13;
             this.btnDeleteProduct.Text = "Delete Product";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
@@ -72,7 +75,7 @@ namespace E_Trade_Entity_Framework_
             this.gbxUpdate.Controls.Add(this.tbxUnitPriceUpdate);
             this.gbxUpdate.Controls.Add(this.lblUnitPriceUpdate);
             this.gbxUpdate.Controls.Add(this.lblStockAmountUpdate);
-            this.gbxUpdate.Location = new System.Drawing.Point(289, 223);
+            this.gbxUpdate.Location = new System.Drawing.Point(241, 223);
             this.gbxUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -242,11 +245,31 @@ namespace E_Trade_Entity_Framework_
             this.dgwProducts.TabIndex = 10;
             this.dgwProducts.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwProducts_RowHeaderMouseClick);
             // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(6, 23);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(133, 23);
+            this.tbxSearch.TabIndex = 14;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
+            // gbxSearch
+            // 
+            this.gbxSearch.Controls.Add(this.tbxSearch);
+            this.gbxSearch.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gbxSearch.Location = new System.Drawing.Point(468, 223);
+            this.gbxSearch.Name = "gbxSearch";
+            this.gbxSearch.Size = new System.Drawing.Size(145, 61);
+            this.gbxSearch.TabIndex = 16;
+            this.gbxSearch.TabStop = false;
+            this.gbxSearch.Text = "Search";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 415);
+            this.ClientSize = new System.Drawing.Size(623, 415);
+            this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
@@ -260,6 +283,8 @@ namespace E_Trade_Entity_Framework_
             this.gbxAdd.ResumeLayout(false);
             this.gbxAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).EndInit();
+            this.gbxSearch.ResumeLayout(false);
+            this.gbxSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -284,6 +309,8 @@ namespace E_Trade_Entity_Framework_
         private System.Windows.Forms.Label lblUnitPrice;
         private System.Windows.Forms.Label lblStockAmount;
         private System.Windows.Forms.DataGridView dgwProducts;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.GroupBox gbxSearch;
     }
 }
 

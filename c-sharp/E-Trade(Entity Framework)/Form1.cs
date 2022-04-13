@@ -64,5 +64,15 @@ namespace E_Trade_Entity_Framework_
 
             LoadProducts();
         }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxSearch.Text == String.Empty)
+                LoadProducts();
+            else
+            {
+                 dgwProducts.DataSource = _productDal.GetProductByName(tbxSearch.Text);
+            }
+        }
     }
 }
