@@ -20,3 +20,4 @@
 *.csproj.*
 *.resources
 *.resx
+*.config

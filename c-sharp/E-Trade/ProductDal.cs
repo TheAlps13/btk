@@ -85,6 +85,7 @@ namespace E_Trade
             SqlCommand deleteCommand = new SqlCommand("DELETE Products WHERE Id=@id", _connection);
             deleteCommand.Parameters.AddWithValue("@id", id);
             deleteCommand.ExecuteNonQuery();
+
             _connection.Close();
         }
     }
