@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using Northwind.Business.Concrete;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Northwind.WebFormsUI
@@ -17,5 +12,10 @@ namespace Northwind.WebFormsUI
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ProductManager productManager = new ProductManager();
+            dgvProduct.DataSource = productManager.GetAllProducts().ToList();
+        }
     }
 }

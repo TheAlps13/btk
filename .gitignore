@@ -17,7 +17,6 @@
 *.manifest
 *.sln
 *.user
-*.csproj.*
 *.resources
 *.resx
 *.config
