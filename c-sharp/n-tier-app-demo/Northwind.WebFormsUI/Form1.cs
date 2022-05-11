@@ -1,4 +1,6 @@
-﻿using Northwind.Business.Concrete;
+﻿using Northwind.Business.Abstract;
+using Northwind.Business.Concrete;
+using Northwind.DataAccess.Concrete;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -14,7 +16,7 @@ namespace Northwind.WebFormsUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ProductManager productManager = new ProductManager();
+            IProductService productManager = new ProductManager(new EfProductDal());
             dgvProduct.DataSource = productManager.GetAllProducts().ToList();
         }
     }

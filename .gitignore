@@ -1,4 +1,3 @@
-*.csproj
 *.json
 *.txt
 *.exe
@@ -20,3 +19,4 @@
 *.resources
 *.resx
 *.config
+*.csproj.*
