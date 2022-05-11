@@ -36,10 +36,10 @@
             // 
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Location = new System.Drawing.Point(12, 88);
+            this.dgvProduct.Location = new System.Drawing.Point(12, 144);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowTemplate.Height = 25;
-            this.dgvProduct.Size = new System.Drawing.Size(779, 350);
+            this.dgvProduct.Size = new System.Drawing.Size(779, 294);
             this.dgvProduct.TabIndex = 0;
             // 
             // Form1
