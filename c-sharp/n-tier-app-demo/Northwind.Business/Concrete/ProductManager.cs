@@ -17,11 +17,7 @@ namespace Northwind.Business.Concrete
         public List<Product> GetAllProducts()
         {
             // Business code
-<<<<<<< HEAD
             return _efProductDal.GetAll();
-=======
-            return _efProductDal.GetAllProducts();
->>>>>>> fc74e27c320710ee403aacd1f0b680be84853356
         }
 
     }
