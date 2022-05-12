@@ -14,9 +14,9 @@
 *.suo
 *.testlog
 *.manifest
-*.sln
 *.user
 *.resources
 *.resx
 *.config
 *.csproj.*
+!App.config
