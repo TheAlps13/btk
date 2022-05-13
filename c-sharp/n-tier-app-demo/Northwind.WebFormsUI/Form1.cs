@@ -37,12 +37,21 @@ namespace Northwind.WebFormsUI
         {
             try
             {
-                dgvProduct.DataSource = _productService.GetProductByCategoryId((int)cbxCategory.SelectedValue);
+                dgvProduct.DataSource = _productService.GetProductsByCategory((int)cbxCategory.SelectedValue);
             }
             catch (Exception ex)
             {
 
             }
+        }
+
+        private void tbxProductName_TextChanged(object sender, EventArgs e)
+        {
+            string productName = tbxProductName.Text;
+            if (productName == null)
+                dgvProduct.DataSource = _productService.GetAllProducts();
+            else
+                dgvProduct.DataSource = _productService.GetProductsByName(productName);
         }
     }
 }
