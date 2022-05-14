@@ -19,4 +19,7 @@
 *.resx
 *.config
 *.csproj.*
+*.vsidx
+*.lock
+*.v2
 !App.config

@@ -19,7 +19,7 @@ namespace Northwind.WebFormsUI
         }
         private void LoadProducts()
         {
-            dgvProduct.DataSource = _productService.GetAllProducts().ToList();
+            dgwProduct.DataSource = _productService.GetAllProducts().ToList();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -33,16 +33,16 @@ namespace Northwind.WebFormsUI
             cbxCategoryName_search.DisplayMember = "CategoryName";
             cbxCategoryName_search.ValueMember = "CategoryId";
 
-            cbxCategoryName_add.DataSource = _categorService.GetAll();
-            cbxCategoryName_add.DisplayMember = "CategoryName";
-            cbxCategoryName_add.ValueMember = "CategoryId";
+            cbxCategoryName_add_update.DataSource = _categorService.GetAll();
+            cbxCategoryName_add_update.DisplayMember = "CategoryName";
+            cbxCategoryName_add_update.ValueMember = "CategoryId";
         }
 
         private void cbxCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                dgvProduct.DataSource = _productService.GetProductsByCategory((int)cbxCategoryName_search.SelectedValue);
+                dgwProduct.DataSource = _productService.GetProductsByCategory((int)cbxCategoryName_search.SelectedValue);
             }
             catch (Exception ex)
             {
@@ -54,20 +54,43 @@ namespace Northwind.WebFormsUI
         {
             string productName = tbxProductName_search.Text;
             if (productName == null)
-                dgvProduct.DataSource = _productService.GetAllProducts();
+                dgwProduct.DataSource = _productService.GetAllProducts();
             else
-                dgvProduct.DataSource = _productService.GetProductsByName(productName);
+                dgwProduct.DataSource = _productService.GetProductsByName(productName);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             _productService.AddProduct(new Product
             {
-                ProductName = tbxProductName_add.Text,
-                CategoryId = (int)cbxCategoryName_add.SelectedValue,
-                UnitPrice = Convert.ToInt32(tbxQuantityPerUnit_add.Text),
-                QuantityPerUnit = tbxQuantityPerUnit_add.Text,
-                UnitsInStock = Convert.ToInt16(tbxUnitsInStock_add.Text)
+                ProductName = tbxProductName_add_update.Text,
+                CategoryId = (int)cbxCategoryName_add_update.SelectedValue,
+                UnitPrice = Convert.ToInt32(tbxQuantityPerUnit_add_update.Text),
+                QuantityPerUnit = tbxQuantityPerUnit_add_update.Text,
+                UnitsInStock = Convert.ToInt16(tbxUnitsInStock_add_update.Text)
+            });
+            LoadProducts();
+        }
+
+        private void dgvProduct_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var dgvSelectedRow = dgwProduct.CurrentRow.Cells;
+            tbxProductName_add_update.Text = dgvSelectedRow[2].Value.ToString();
+            tbxQuantityPerUnit_add_update.Text = dgvSelectedRow[4].Value.ToString();
+            tbxUnitPrice_add_update.Text = dgvSelectedRow[3].Value.ToString();
+            tbxUnitsInStock_add_update.Text = dgvSelectedRow[5].Value.ToString();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _productService.UpdateProduct(new Product
+            {
+                ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value),
+                ProductName = tbxProductName_add_update.Text,
+                CategoryId = Convert.ToInt32(cbxCategoryName_add_update.SelectedValue),
+                QuantityPerUnit = tbxQuantityPerUnit_add_update.Text,
+                UnitPrice = Convert.ToDecimal(tbxUnitPrice_add_update.Text),
+                UnitsInStock = Convert.ToInt16(tbxUnitsInStock_add_update.Text)
             });
             LoadProducts();
         }

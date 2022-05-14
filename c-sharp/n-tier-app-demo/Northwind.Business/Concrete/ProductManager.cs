@@ -33,5 +33,10 @@ namespace Northwind.Business.Concrete
         {
             return _efProductDal.GetAll(p => p.ProductName.Contains(productName));
         }
+
+        public void UpdateProduct(Product product)
+        {
+            _efProductDal.Update(product);
+        }
     }
 }
