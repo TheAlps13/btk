@@ -14,9 +14,14 @@ namespace Northwind.Business.Concrete
         {
             _efProductDal = productDal;
         }
+
+        public void AddProduct(Product product)
+        {
+            _efProductDal.Add(product);
+        }
+
         public List<Product> GetAllProducts()
         {
-            // Business code
             return _efProductDal.GetAll();
         }
 
