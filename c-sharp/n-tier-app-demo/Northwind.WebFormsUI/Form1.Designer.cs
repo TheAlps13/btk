@@ -31,11 +31,11 @@
             this.dgwProduct = new System.Windows.Forms.DataGridView();
             this.gbxCategoryName_search = new System.Windows.Forms.GroupBox();
             this.cbxCategoryName_search = new System.Windows.Forms.ComboBox();
-            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblCategoryName_search = new System.Windows.Forms.Label();
             this.gbxProductName_search = new System.Windows.Forms.GroupBox();
             this.tbxProductName_search = new System.Windows.Forms.TextBox();
-            this.lblProductName = new System.Windows.Forms.Label();
-            this.gbxProductName_add = new System.Windows.Forms.GroupBox();
+            this.lblProductName_search = new System.Windows.Forms.Label();
+            this.gbxProductName_add_update = new System.Windows.Forms.GroupBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.tbxUnitPrice_add_update = new System.Windows.Forms.TextBox();
             this.tbxQuantityPerUnit_add_update = new System.Windows.Forms.TextBox();
@@ -48,10 +48,11 @@
             this.lblCategoryName_add = new System.Windows.Forms.Label();
             this.lblQuantityPerUnit_add = new System.Windows.Forms.Label();
             this.lblProductName_add = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxCategoryName_search.SuspendLayout();
             this.gbxProductName_search.SuspendLayout();
-            this.gbxProductName_add.SuspendLayout();
+            this.gbxProductName_add_update.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwProduct
@@ -68,7 +69,7 @@
             // gbxCategoryName_search
             // 
             this.gbxCategoryName_search.Controls.Add(this.cbxCategoryName_search);
-            this.gbxCategoryName_search.Controls.Add(this.lblCategory);
+            this.gbxCategoryName_search.Controls.Add(this.lblCategoryName_search);
             this.gbxCategoryName_search.Location = new System.Drawing.Point(12, 12);
             this.gbxCategoryName_search.Name = "gbxCategoryName_search";
             this.gbxCategoryName_search.Size = new System.Drawing.Size(248, 85);
@@ -85,19 +86,19 @@
             this.cbxCategoryName_search.TabIndex = 4;
             this.cbxCategoryName_search.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
             // 
-            // lblCategory
+            // lblCategoryName_search
             // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(6, 42);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(99, 15);
-            this.lblCategory.TabIndex = 2;
-            this.lblCategory.Text = "Category Name : ";
+            this.lblCategoryName_search.AutoSize = true;
+            this.lblCategoryName_search.Location = new System.Drawing.Point(6, 42);
+            this.lblCategoryName_search.Name = "lblCategoryName_search";
+            this.lblCategoryName_search.Size = new System.Drawing.Size(99, 15);
+            this.lblCategoryName_search.TabIndex = 2;
+            this.lblCategoryName_search.Text = "Category Name : ";
             // 
             // gbxProductName_search
             // 
             this.gbxProductName_search.Controls.Add(this.tbxProductName_search);
-            this.gbxProductName_search.Controls.Add(this.lblProductName);
+            this.gbxProductName_search.Controls.Add(this.lblProductName_search);
             this.gbxProductName_search.Location = new System.Drawing.Point(12, 124);
             this.gbxProductName_search.Name = "gbxProductName_search";
             this.gbxProductName_search.Size = new System.Drawing.Size(248, 90);
@@ -113,35 +114,35 @@
             this.tbxProductName_search.TabIndex = 4;
             this.tbxProductName_search.TextChanged += new System.EventHandler(this.tbxProductName_TextChanged);
             // 
-            // lblProductName
+            // lblProductName_search
             // 
-            this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(6, 46);
-            this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(90, 15);
-            this.lblProductName.TabIndex = 3;
-            this.lblProductName.Text = "Product Name :";
+            this.lblProductName_search.AutoSize = true;
+            this.lblProductName_search.Location = new System.Drawing.Point(6, 46);
+            this.lblProductName_search.Name = "lblProductName_search";
+            this.lblProductName_search.Size = new System.Drawing.Size(90, 15);
+            this.lblProductName_search.TabIndex = 3;
+            this.lblProductName_search.Text = "Product Name :";
             // 
-            // gbxProductName_add
+            // gbxProductName_add_update
             // 
-            this.gbxProductName_add.Controls.Add(this.btnUpdate);
-            this.gbxProductName_add.Controls.Add(this.tbxUnitPrice_add_update);
-            this.gbxProductName_add.Controls.Add(this.tbxQuantityPerUnit_add_update);
-            this.gbxProductName_add.Controls.Add(this.tbxUnitsInStock_add_update);
-            this.gbxProductName_add.Controls.Add(this.cbxCategoryName_add_update);
-            this.gbxProductName_add.Controls.Add(this.tbxProductName_add_update);
-            this.gbxProductName_add.Controls.Add(this.btnAdd);
-            this.gbxProductName_add.Controls.Add(this.lblUnitPrice_add);
-            this.gbxProductName_add.Controls.Add(this.lblUnitsInStock_add);
-            this.gbxProductName_add.Controls.Add(this.lblCategoryName_add);
-            this.gbxProductName_add.Controls.Add(this.lblQuantityPerUnit_add);
-            this.gbxProductName_add.Controls.Add(this.lblProductName_add);
-            this.gbxProductName_add.Location = new System.Drawing.Point(377, 12);
-            this.gbxProductName_add.Name = "gbxProductName_add";
-            this.gbxProductName_add.Size = new System.Drawing.Size(251, 202);
-            this.gbxProductName_add.TabIndex = 2;
-            this.gbxProductName_add.TabStop = false;
-            this.gbxProductName_add.Text = "Add Product";
+            this.gbxProductName_add_update.Controls.Add(this.btnUpdate);
+            this.gbxProductName_add_update.Controls.Add(this.tbxUnitPrice_add_update);
+            this.gbxProductName_add_update.Controls.Add(this.tbxQuantityPerUnit_add_update);
+            this.gbxProductName_add_update.Controls.Add(this.tbxUnitsInStock_add_update);
+            this.gbxProductName_add_update.Controls.Add(this.cbxCategoryName_add_update);
+            this.gbxProductName_add_update.Controls.Add(this.tbxProductName_add_update);
+            this.gbxProductName_add_update.Controls.Add(this.btnAdd);
+            this.gbxProductName_add_update.Controls.Add(this.lblUnitPrice_add);
+            this.gbxProductName_add_update.Controls.Add(this.lblUnitsInStock_add);
+            this.gbxProductName_add_update.Controls.Add(this.lblCategoryName_add);
+            this.gbxProductName_add_update.Controls.Add(this.lblQuantityPerUnit_add);
+            this.gbxProductName_add_update.Controls.Add(this.lblProductName_add);
+            this.gbxProductName_add_update.Location = new System.Drawing.Point(279, 12);
+            this.gbxProductName_add_update.Name = "gbxProductName_add_update";
+            this.gbxProductName_add_update.Size = new System.Drawing.Size(251, 202);
+            this.gbxProductName_add_update.TabIndex = 2;
+            this.gbxProductName_add_update.TabStop = false;
+            this.gbxProductName_add_update.Text = "Add Product";
             // 
             // btnUpdate
             // 
@@ -244,12 +245,23 @@
             this.lblProductName_add.TabIndex = 3;
             this.lblProductName_add.Text = "Product Name :";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(536, 74);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(92, 68);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 429);
-            this.Controls.Add(this.gbxProductName_add);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.gbxProductName_add_update);
             this.Controls.Add(this.gbxProductName_search);
             this.Controls.Add(this.gbxCategoryName_search);
             this.Controls.Add(this.dgwProduct);
@@ -261,8 +273,8 @@
             this.gbxCategoryName_search.PerformLayout();
             this.gbxProductName_search.ResumeLayout(false);
             this.gbxProductName_search.PerformLayout();
-            this.gbxProductName_add.ResumeLayout(false);
-            this.gbxProductName_add.PerformLayout();
+            this.gbxProductName_add_update.ResumeLayout(false);
+            this.gbxProductName_add_update.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -272,11 +284,11 @@
         private System.Windows.Forms.DataGridView dgwProduct;
         private System.Windows.Forms.GroupBox gbxCategoryName_search;
         private System.Windows.Forms.ComboBox cbxCategoryName_search;
-        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblCategoryName_search;
         private System.Windows.Forms.GroupBox gbxProductName_search;
-        private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.Label lblProductName_search;
         private System.Windows.Forms.TextBox tbxProductName_search;
-        private System.Windows.Forms.GroupBox gbxProductName_add;
+        private System.Windows.Forms.GroupBox gbxProductName_add_update;
         private System.Windows.Forms.Label lblProductName_add;
         private System.Windows.Forms.Label lblCategoryName_add;
         private System.Windows.Forms.Label lblQuantityPerUnit_add;
@@ -289,5 +301,6 @@
         private System.Windows.Forms.Label lblUnitPrice_add;
         private System.Windows.Forms.Label lblUnitsInStock_add;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

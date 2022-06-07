@@ -14,5 +14,6 @@ namespace Northwind.Business.Abstract
         List<Product> GetProductsByName(string productName);
         void AddProduct(Product product);
         void UpdateProduct(Product product);
+        void DeleteProduct(Product product);
     }
 }

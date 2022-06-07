@@ -64,7 +64,7 @@ namespace Northwind.WebFormsUI
             _productService.AddProduct(new Product
             {
                 ProductName = tbxProductName_add_update.Text,
-                CategoryId = (int)cbxCategoryName_add_update.SelectedValue,
+                CategoryId =Convert.ToInt32(cbxCategoryName_add_update.SelectedValue),
                 UnitPrice = Convert.ToInt32(tbxQuantityPerUnit_add_update.Text),
                 QuantityPerUnit = tbxQuantityPerUnit_add_update.Text,
                 UnitsInStock = Convert.ToInt16(tbxUnitsInStock_add_update.Text)
@@ -74,11 +74,11 @@ namespace Northwind.WebFormsUI
 
         private void dgvProduct_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var dgvSelectedRow = dgwProduct.CurrentRow.Cells;
-            tbxProductName_add_update.Text = dgvSelectedRow[2].Value.ToString();
-            tbxQuantityPerUnit_add_update.Text = dgvSelectedRow[4].Value.ToString();
-            tbxUnitPrice_add_update.Text = dgvSelectedRow[3].Value.ToString();
-            tbxUnitsInStock_add_update.Text = dgvSelectedRow[5].Value.ToString();
+            var dgvSelectedCells = dgwProduct.CurrentRow.Cells;
+            tbxProductName_add_update.Text = dgvSelectedCells[2].Value.ToString();
+            tbxQuantityPerUnit_add_update.Text = dgvSelectedCells[4].Value.ToString();
+            tbxUnitPrice_add_update.Text = dgvSelectedCells[3].Value.ToString();
+            tbxUnitsInStock_add_update.Text = dgvSelectedCells[5].Value.ToString();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -92,6 +92,16 @@ namespace Northwind.WebFormsUI
                 UnitPrice = Convert.ToDecimal(tbxUnitPrice_add_update.Text),
                 UnitsInStock = Convert.ToInt16(tbxUnitsInStock_add_update.Text)
             });
+            LoadProducts();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int? ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value);
+            if(ProductId != null)
+            {
+                _productService.DeleteProduct(new Product { ProductId = ProductId.Value });
+            }
             LoadProducts();
         }
     }
