@@ -1,5 +1,6 @@
 ﻿using Northwind.Business.Abstract;
 using Northwind.Business.Concrete;
+using Northwind.Business.DependencyResolvers.Ninject;
 using Northwind.DataAccess.Concrete;
 using Northwind.DataAccess.Concrete.EntityFranework;
 using Northwind.Entities.Concrete;
@@ -11,12 +12,13 @@ namespace Northwind.WebFormsUI
 {
     public partial class Form1 : Form
     {
-        IProductService _productService = new ProductManager(new EfProductDal());
-        ICategoryService _categorService = new CategoryManager(new EfCategoryDal());
+        IProductService _productService = InstanceFactory.GetInstance<IProductService>();
+        ICategoryService _categoryService = InstanceFactory.GetInstance<ICategoryService>();
         public Form1()
         {
             InitializeComponent();
         }
+   
         private void LoadProducts()
         {
             dgwProduct.DataSource = _productService.GetAllProducts().ToList();
@@ -29,11 +31,11 @@ namespace Northwind.WebFormsUI
 
         private void LoadCategories()
         {
-            cbxCategoryName_search.DataSource = _categorService.GetAll();
+            cbxCategoryName_search.DataSource = _categoryService.GetAll();
             cbxCategoryName_search.DisplayMember = "CategoryName";
             cbxCategoryName_search.ValueMember = "CategoryId";
 
-            cbxCategoryName_add_update.DataSource = _categorService.GetAll();
+            cbxCategoryName_add_update.DataSource = _categoryService.GetAll();
             cbxCategoryName_add_update.DisplayMember = "CategoryName";
             cbxCategoryName_add_update.ValueMember = "CategoryId";
         }
