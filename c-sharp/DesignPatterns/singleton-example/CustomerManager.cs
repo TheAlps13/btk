@@ -9,6 +9,7 @@ namespace singleton_design_pattern_example
     public class CustomerManager
     {
         private static CustomerManager _customerManager;
+        static object _customerManagerLock = new object();
         private CustomerManager()
         {
 
@@ -16,7 +17,18 @@ namespace singleton_design_pattern_example
 
         public static CustomerManager CreateAsSingleton()
         {
-           return _customerManager ??= new CustomerManager();
+            if (_customerManager == null)
+            {
+                lock (_customerManagerLock)
+                {
+                    if (_customerManager == null)
+                    {
+                        _customerManager = new CustomerManager();
+                    }
+                }
+            }
+
+            return _customerManager;
         }
 
         public void Save()
