@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "builder-design", "builder-d
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facade-design-method", "facade-design-method\facade-design-method.csproj", "{78780762-8B80-4D7C-BABC-1B851A7FB3B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adapter-design-method", "adapter-design-method\adapter-design-method.csproj", "{AEE65B61-B0DE-4D67-88FB-7507D4C015A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adapter-design-method", "adapter-design-method\adapter-design-method.csproj", "{AEE65B61-B0DE-4D67-88FB-7507D4C015A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "composite-design-method", "composite-design-method\composite-design-method.csproj", "{A2823FF5-5B50-4065-A372-1959B93BE215}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{AEE65B61-B0DE-4D67-88FB-7507D4C015A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE65B61-B0DE-4D67-88FB-7507D4C015A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE65B61-B0DE-4D67-88FB-7507D4C015A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2823FF5-5B50-4065-A372-1959B93BE215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2823FF5-5B50-4065-A372-1959B93BE215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2823FF5-5B50-4065-A372-1959B93BE215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2823FF5-5B50-4065-A372-1959B93BE215}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
