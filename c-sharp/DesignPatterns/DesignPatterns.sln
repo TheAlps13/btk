@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "proxy-design-method", "prox
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "decorator-design-method", "decorator-design-method\decorator-design-method.csproj", "{032110CA-15DE-4CA2-8B04-F993506F3C1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bridge-design-method", "bridge-design-method\bridge-design-method.csproj", "{AA3ABFEC-37C0-46C4-8A9A-70D473969D94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bridge-design-method", "bridge-design-method\bridge-design-method.csproj", "{AA3ABFEC-37C0-46C4-8A9A-70D473969D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "strategy-design-method", "strategy-design-method\strategy-design-method.csproj", "{2E80FDF6-9FF4-4F6F-8F2D-8AFF53CBF16C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{AA3ABFEC-37C0-46C4-8A9A-70D473969D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA3ABFEC-37C0-46C4-8A9A-70D473969D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA3ABFEC-37C0-46C4-8A9A-70D473969D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E80FDF6-9FF4-4F6F-8F2D-8AFF53CBF16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E80FDF6-9FF4-4F6F-8F2D-8AFF53CBF16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E80FDF6-9FF4-4F6F-8F2D-8AFF53CBF16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E80FDF6-9FF4-4F6F-8F2D-8AFF53CBF16C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
