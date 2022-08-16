@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace singleton_design_pattern_example
+namespace singleton_example
 {
     internal class Program
     {

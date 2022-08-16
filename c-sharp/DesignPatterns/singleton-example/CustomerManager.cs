@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace singleton_design_pattern_example
+namespace singleton_example
 {
     public class CustomerManager
     {

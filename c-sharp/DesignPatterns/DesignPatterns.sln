@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "observer-design-method", "o
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "chain-of-responsibility-method", "chain-of-responsibility-method\chain-of-responsibility-method.csproj", "{3A915B88-781C-41E3-81EC-496ADC8C392A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memento-design-method", "memento-design-method\memento-design-method.csproj", "{AB6E04A9-28CB-4CD6-945C-5B554FC8F620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "memento-design-method", "memento-design-method\memento-design-method.csproj", "{AB6E04A9-28CB-4CD6-945C-5B554FC8F620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template-design-method", "template-design-method\template-design-method.csproj", "{D68ECBFF-A9B5-41AA-9A61-DE3999009F81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{AB6E04A9-28CB-4CD6-945C-5B554FC8F620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB6E04A9-28CB-4CD6-945C-5B554FC8F620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB6E04A9-28CB-4CD6-945C-5B554FC8F620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68ECBFF-A9B5-41AA-9A61-DE3999009F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68ECBFF-A9B5-41AA-9A61-DE3999009F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68ECBFF-A9B5-41AA-9A61-DE3999009F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68ECBFF-A9B5-41AA-9A61-DE3999009F81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
