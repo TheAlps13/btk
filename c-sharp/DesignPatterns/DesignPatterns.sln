@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "template-design-method", "t
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "state-design-method", "state-design-method\state-design-method.csproj", "{73DE6097-1C05-42FE-BA23-B37B435E0434}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediator-design-method", "mediator-design-method\mediator-design-method.csproj", "{A74D2D95-46FF-4F3D-AD25-B3EFE04DB63B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediator-design-method", "mediator-design-method\mediator-design-method.csproj", "{A74D2D95-46FF-4F3D-AD25-B3EFE04DB63B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "command-design-method", "command-design-method\command-design-method.csproj", "{B61DB30A-75A5-442E-9528-872D5B52A903}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{A74D2D95-46FF-4F3D-AD25-B3EFE04DB63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A74D2D95-46FF-4F3D-AD25-B3EFE04DB63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A74D2D95-46FF-4F3D-AD25-B3EFE04DB63B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61DB30A-75A5-442E-9528-872D5B52A903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61DB30A-75A5-442E-9528-872D5B52A903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61DB30A-75A5-442E-9528-872D5B52A903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61DB30A-75A5-442E-9528-872D5B52A903}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
